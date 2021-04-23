@@ -248,7 +248,7 @@ function Save-Git {
                     $jiraRef = "release"
                     continue
                 }
-                { $_ -match '^NWMP(E|O)-[0-9]{4,5}' } {
+                { $_ -match '^JIR(A|E)-[0-9]{4,5}' } {
                     $jiraRef = [regex]::Match($_, '^JIR(A|E)-[0-9]{4,5}').captures.groups[0].value
                     continue
                 }
